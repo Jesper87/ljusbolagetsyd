@@ -1,0 +1,247 @@
+﻿body {
+  padding-top: 50px;
+  background-image: url('Images/Background/backgroundgradient.jpg');
+  font-family: Tahoma;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+  white-space: normal;
+}
+
+
+h1, h2 {
+  color: #fff;
+}
+
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+  max-width: 280px;
+}
+
+hr {
+  border-top: 2px dotted white;
+}
+
+.nav {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navbar {
+  background-color: black;
+}
+
+body > div.navbar.navbar-inverse.navbar-fixed-top > div > div.navbar-collapse.collapse > a {
+  padding: 0;
+  float: right;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
+
+  .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-brand:hover {
+    color: gray;
+  }
+
+.navbar-inverse .navbar-brand {
+  font-size: 22px;
+  color: #e42626;
+  color: rgba(228, 38, 38, 1);
+}
+
+.btn-default, .btn-primary {
+  margin-top: 10px;
+  background-color: #69c242;
+  background-color: rgba(105, 194, 66, 1);
+  color: black;
+  border: none;
+}
+
+  .btn-default:hover, .btn-primary:hover {
+    background-color: #4d8a3c;
+    background-color: rgba(77, 138, 60, 1);
+    color: black;
+    border: none;
+  }
+
+.carousel {
+  max-width: 70%;
+  margin: 10px auto;
+}
+
+.equipment {
+  display: inline-block;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  padding: 4px;
+  line-height: 1.428571429;
+}
+
+  .equipment p {
+    color: white;
+    font-weight: bold;
+  }
+
+  .equipment > img {
+    display: block;
+    max-height: 160px;
+    margin: 0 auto;
+  }
+
+.caption > p {
+  text-align: center;
+  margin-top: 10px;
+  background-color: black;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.item > img {
+  margin: 0 auto;
+}
+
+.jumbotron {
+  background-color: #000800;
+  background-color: rgba(0, 8, 0, 1);
+  color: #f5eaea;
+  color: rgba(245, 234, 234, 1);
+  -ms-opacity: 0.9;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+  .jumbotron > h2 {
+    color: #e42626;
+    color: rgba(228, 38, 38, 1);
+  }
+
+  .jumbotron > p {
+    font-size: 18px;
+  }
+
+.box {
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+}
+
+  .box > p {
+    margin: 0 0 5px;
+    font-weight: bold;
+  }
+
+  .box h2 {
+    color: #fff;
+  }
+
+  .box span {
+    padding-left: 10px;
+  }
+
+footer {
+  border-top: 1px dotted white;
+  clear: both;
+  margin: 10px 0 0 0;
+}
+
+  footer p {
+    color: #fff;
+    margin: 0;
+    padding: 10px;
+  }
+
+.gallery-images div {
+  padding: 15px;
+}
+
+.modal-content {
+  background-color: black;
+}
+
+  .modal-content .modal-footer {
+    border: none;
+  }
+
+  .modal-content button {
+    float: left;
+  }
+
+.services-list {
+  color: #fff;
+  float: left;
+}
+
+.services-img {
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  float: right;
+  margin-bottom: 10px;
+  max-width: 375px;
+}
+
+.services-list p {
+  font-size: 16px;
+}
+
+.services-list h3, .services-list span {
+  font-weight: bold;
+}
+
+.services-list h3 {
+  text-transform: uppercase;
+  padding: 10px 0 5px 0;
+}
+
+.services-list span {
+  margin: 0 10px 0 0;
+}
+
+.row > ul > li {
+  display: inline;
+  color: #69c242;
+  margin: 0 10px 0 0;
+  font-weight: bold;
+}
+
+  .row > ul > li > span {
+    margin: 0 5px 0 0;
+  }
+
+.contact, .contact-form {
+  color: #fff;
+}
+.contact > address > p{
+  margin-bottom:0px;
+}
+.contact > address a {
+  color:#fff;
+}
+.contact{
+  text-align:center;  
+}
+#links img {
+  max-width: 32%;
+}
+.about-image >img{
+  max-width:100%;
+}
+@media screen and (max-width: 768px) {
+  h1, h2 {
+    color: black;
+    font-weight: bold;
+  }
+}

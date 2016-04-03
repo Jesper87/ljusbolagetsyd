@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    @{
+        Html.RenderPartial("_Slider");
+    }
+</div>
+<div class="jumbotron">
+    <h2>Ljusbolaget Syd</h2>
+    <p class="lead">Som Ni hör på namnet så arbetar vi med ljussättning vid såväl stora som små events. Vi har arbetar även med ljud och erbjuder bra teknik till förmånliga priser.</p>
+    @Html.ActionLink("Kontakta oss", "Contact", "Home", null, new { @class = "btn btn-primary btn-lg" })
+</div>
+
+<div class="row">
+    <div class="col-lg-4 box">
+		<img class="img-circle" src="../../Content/Images/Gallery/trelleborgsgalan.jpg" alt="" style="width: 160px; height: 160px;" />
+        <h2>Referenser</h2>
+            <p>Trelleborgsgalan</p>
+            <p>Söderslätts Countryfestival</p>
+            <p>Malmö music expo</p>
+        @Html.ActionLink("Mer info", "Gallery", "Home", null, new { @class = "btn btn-default" })
+    </div>
+    <div class="col-lg-4 box">
+        <img class="img-circle" src="../../Content/Images/Equipment/dbcifgbh.png" alt="" style="width: 160px; height: 160px; background-color: white;" />
+        <h2>Utrustning</h2>
+        <p>
+            "Vi erbjuder all utrustning ni kan tänkas behöva till ert event."
+        </p>
+        @Html.ActionLink("Mer info", "Equipment", "Home", null, new { @class = "btn btn-default" })
+    </div>
+    <div class="col-lg-4 box">
+        <img class="img-circle" src="../../Content/Images/Logo/logo.jpg" alt="" style="width: 160px; height: 160px;" />
+        <h2>Tjänster</h2>
+        <p>Ljus<span class="glyphicon glyphicon-ok"></span></p>
+        <p>Ljud<span class="glyphicon glyphicon-ok"></span></p>
+        <p>Marknadsföring<span class="glyphicon glyphicon-ok"></span></p>
+        <p>Uthyrning av tält och scener<span class="glyphicon glyphicon-ok"></span></p>
+        @Html.ActionLink("Mer info", "Services", "Home", null, new { @class = "btn btn-default" })
+    </div>
+</div>

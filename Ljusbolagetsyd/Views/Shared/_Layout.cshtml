@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Ljusbolaget, leverar ljus och ljud. Scener, tält med mera. Allt som behövs till erat event, besök oss på ljusbolaget.se ">
+	    <meta name="keywords" content>
+	    <meta name="robots" content="index,follow"/>
+	    <meta name="googlebot" content="index,follow"/>
+        <meta name="author" content="Ljusbolaget Syd"/>
+		<title>Ljusbolaget Syd | Allt som behövs till ditt event </title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+		<script src="//ajax.aspnetcdn.com/ajax/mvc/5.0/jquery.validate.unobtrusive.min.js"></script>
+		@Scripts.Render("~/bundles/modernizr")
+		<link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+		<link rel="stylesheet" href="~/Content/blueimp-gallery.min.css">
+		@Styles.Render("~/Content/css")
+	</head>
+<body>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				@Html.ActionLink("Ljusbolaget Syd", "Index", "Home", new { area = "" }, new { @class = "nav-name navbar-brand" })
+			</div>
+			<div class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li>@Html.ActionLink("Hem", "Index", "Home")</li>
+					<li>@Html.ActionLink("Om oss", "About", "Home")</li>
+					<li>@Html.ActionLink("Referenser", "Gallery", "Home")</li>
+					<li>@Html.ActionLink("Tjänster", "Services", "Home")</li>
+					<li>@Html.ActionLink("Utrustning", "Equipment", "Home")</li>
+					<li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+				</ul>
+				<a class="navbar-brand">
+					<img src="/Content/Images/Logo/headerlogo.jpg" class="img-responsive">
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="container body-content">
+		@RenderBody()
+		<footer>
+			<p>&copy; @DateTime.Now.Year - Ljusbolaget Syd AB</p>
+		</footer>
+	</div>
+	@Scripts.Render("~/bundles/jquery")
+	@Scripts.Render("~/bundles/bootstrap")
+	@RenderSection("scripts", required: false)
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+	<script src="~/Scripts/blueimp-gallery.min.js"></script>
+	
+	<script>
+		document.getElementById('links').onclick = function (event) {
+			event = event || window.event;
+			var target = event.target || event.srcElement,
+				link = target.src ? target.parentNode : target,
+				options = { index: link, event: event },
+				links = this.getElementsByTagName('a');
+			blueimp.Gallery(links, options);
+		};
+	</script>
+
+</body>
+</html>
