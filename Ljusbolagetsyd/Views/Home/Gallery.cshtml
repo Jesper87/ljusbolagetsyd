@@ -1,114 +1,49 @@
 ﻿@using Ljusbolagetsyd.Data.Dto
 @model IEnumerable<GalleryImage>
- 
+
 
 @{
-    ViewBag.Title = "Gallery";
+   ViewBag.Title = "Gallery";
 }
 
 <h1>Referenser</h1>
 <hr />
 <div class="row">
-	<ul>
-		<li><span class="glyphicon glyphicon-chevron-right"></span>Trelleborgsgalan</li>
-		<li><span class="glyphicon glyphicon-chevron-right"></span>Countryfestivalen</li>
-		<li><span class="glyphicon glyphicon-chevron-right"></span>Malmö music expo</li>
-		<li><span class="glyphicon glyphicon-chevron-right"></span>Trelleborgs isbana</li>
-		<li><span class="glyphicon glyphicon-chevron-right"></span>BMX Worldcup Ängelholm</li>
-	</ul>
+   <ul>
+      <li><span class="glyphicon glyphicon-chevron-right"></span>Trelleborgsgalan</li>
+      <li><span class="glyphicon glyphicon-chevron-right"></span>Countryfestivalen</li>
+      <li><span class="glyphicon glyphicon-chevron-right"></span>Malmö music expo</li>
+      <li><span class="glyphicon glyphicon-chevron-right"></span>Trelleborgs isbana</li>
+      <li><span class="glyphicon glyphicon-chevron-right"></span>BMX Worldcup Ängelholm</li>
+   </ul>
 </div>
 
 <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
-  <div class="slides"></div>
-  <h3 class="title"></h3>
-  <a class="prev">‹</a>
-  <a class="next">›</a>
-  <a class="close">×</a>
-  <a class="play-pause"></a>
-  <ol class="indicator"></ol>
+   <div class="slides"></div>
+   <h3 class="title"></h3>
+   <a class="prev">‹</a>
+   <a class="next">›</a>
+   <a class="close">×</a>
+   <a class="play-pause"></a>
+   <ol class="indicator"></ol>
 </div>
 
 
-<div id="links">
-     @foreach (GalleryImage galleryimage in Model)
-   {
-    <a href="@galleryimage.ImageUrl" title="Ljus">
-    <img src="@galleryimage.ImageUrl" alt="Ljus">
-  </a>
-   }
+<div class="container">
+   <div id="links">
+      @for (int i = 0; i < Model.Count();)
+      {
+         <div class="row limit">
+            @foreach (GalleryImage galleryimage in Model.Skip(i).Take(3))
+            {
+               <div class=" col-md-4">
+                  <a href="@galleryimage.ImageUrl" title="Ljus">
+                     <img src="@galleryimage.ImageUrl" alt="Ljus">
+                  </a>
+               </div>
+               i++;
+            }
+         </div>
+      }
+   </div>
 </div>
-
-
-
-@*<div id="links">
-	<div class="img" style="background-image: url('http://i.imgur.com/tI5jq2c.jpg');"></div>
-	<div class="img" style="background-image: url('http://i.imgur.com/37w80TG.jpg');"></div>
-	<div class="img" style="background-image: url('http://i.imgur.com/B1MCOtx.jpg');"></div>
-	<div class="img" style="background-image: url('http://i.imgur.com/tI5jq2c.jpg');"></div>
-	<div class="img" style="background-image: url('http://i.imgur.com/37w80TG.jpg');"></div>
-	<div class="img" style="background-image: url('http://i.imgur.com/B1MCOtx.jpg');"></div>
-	<div class="img" style="background-image: url('http://i.imgur.com/tI5jq2c.jpg');"></div>
-	<div class="img" style="background-image: url('http://i.imgur.com/37w80TG.jpg');"></div>
-	<div class="img" style="background-image: url('http://i.imgur.com/B1MCOtx.jpg');"></div>
-</div>
-<style>
-	.img {
-		position: relative;
-		float: left;
-		width: 33%;
-		height: 300px;
-		background-position: 50% 50%;
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
-</style>
-*@
-
-@*<div id="links">
-	<a href="~/Content/Images/Gallery/Bmx2.jpg" title="Ljus">
-		<img src="~/Content/Images/Gallery/Bmx2.jpg" alt="Ljus">
-	</a>
-	<a href="~/Content/Images/Gallery/Bmx3.jpg" title="Ljus">
-		<img src="~/Content/Images/Gallery/Bmx3.jpg" alt="Ljus">
-	</a>
-	<a href="~/Content/Images/Gallery/mans1.jpg" title="Mans Zelmerlov">
-		<img src="~/Content/Images/Gallery/mans1.jpg" alt="Mans Zelmerlov">
-	</a>
-	<a href="~/Content/Images/Gallery/mans2.jpg" title="Mans Zelmerlov">
-		<img src="~/Content/Images/Gallery/mans2.jpg" alt="Mans Zelmerlov">
-	</a>
-	<a href="~/Content/Images/Gallery/bild11.jpg" title="Ljus">
-		<img src="~/Content/Images/Gallery/bild11.jpg" alt="Ljus">
-	</a>
-	<a href="~/Content/Images/Gallery/bild12.jpg" title="Ljus">
-		<img src="~/Content/Images/Gallery/bild12.jpg" alt="Ljus">
-	</a>
-	<a href="~/Content/Images/Gallery/bild13.jpg" title="Ljus">
-		<img src="~/Content/Images/Gallery/bild13.jpg" alt="Ljus">
-	</a>
-	<a href="~/Content/Images/Gallery/bild14.jpg" title="Ljus">
-		<img src="~/Content/Images/Gallery/bild14.jpg" alt="Ljus">
-	</a>
-	<a href="~/Content/Images/Gallery/bild15.jpg" title="Ljus">
-		<img src="~/Content/Images/Gallery/bild15.jpg" alt="Ljus">
-	</a>
-	<a href="~/Content/Images/Gallery/bild2.jpg" title="Ljus">
-		<img src="~/Content/Images/Gallery/bild2.jpg" alt="Ljus">
-	</a>
-	<a href="~/Content/Images/Gallery/bild3.jpg" title="Ljus">
-		<img src="~/Content/Images/Gallery/bild3.jpg" alt="Ljus">
-	</a>
-	<a href="~/Content/Images/Gallery/bild4.jpg" title="Ljus">
-		<img src="~/Content/Images/Gallery/bild4.jpg" alt="Ljus">
-	</a>
-	<a href="~/Content/Images/Gallery/bild5.jpg" title="Ljus">
-		<img src="~/Content/Images/Gallery/bild5.jpg" alt="Ljus">
-	</a>
-	<a href="~/Content/Images/Gallery/bild7.jpg" title="Ljus">
-		<img src="~/Content/Images/Gallery/bild7.jpg" alt="Ljus">
-	</a>
-	<a href="~/Content/Images/Gallery/countryfestivalen.jpg" title="Ljus">
-		<img src="~/Content/Images/Gallery/countryfestivalen.jpg" alt="Ljus">
-	</a>
-</div>
-*@
