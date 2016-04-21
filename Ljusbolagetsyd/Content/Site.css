@@ -1,6 +1,7 @@
 ﻿body {
   padding-top: 50px;
-  background-image: url('Images/Background/backgroundgradient.jpg');
+  /*background-image: url('Images/Background/backgroundgradient.jpg');*/
+   background-color: #003;
   font-family: Tahoma;
 }
 
@@ -40,7 +41,7 @@ hr {
 }
 
 .navbar {
-  background-color: black;
+  background-color: #000;
 }
 
 body > div.navbar.navbar-inverse.navbar-fixed-top > div > div.navbar-collapse.collapse > a {
@@ -234,7 +235,7 @@ footer {
   text-align:center;  
 }
 #links img {
-  max-width: 32%;
+  max-width: 100%;
 }
 .about-image >img{
   max-width:100%;
@@ -244,4 +245,11 @@ footer {
     color: black;
     font-weight: bold;
   }
+}
+.row.limit {
+   padding: 10px 0;
+}
+.row.limit [class*="col-"]{
+  max-height:200px;
+  overflow:hidden;
 }
