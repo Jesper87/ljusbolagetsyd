@@ -18,55 +18,67 @@
 		@Styles.Render("~/Content/css")
 	</head>
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</button>
-				@Html.ActionLink("Ljusbolaget Syd", "Index", "Home", new { area = "" }, new { @class = "nav-name navbar-brand" })
-			</div>
-			<div class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li>@Html.ActionLink("Hem", "Index", "Home")</li>
-					<li>@Html.ActionLink("Om oss", "About", "Home")</li>
-					<li>@Html.ActionLink("Referenser", "Gallery", "Home")</li>
-					<li>@Html.ActionLink("Tjänster", "Services", "Home")</li>
-					<li>@Html.ActionLink("Utrustning", "Equipment", "Home")</li>
-					<li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
-				</ul>
-				<a class="navbar-brand">
-					<img src="/Content/Images/Logo/headerlogo.jpg" class="img-responsive">
-				</a>
-			</div>
-		</div>
-	</div>
-	<div class="container body-content">
-		@RenderBody()
-		<footer>
-			<p>&copy; @DateTime.Now.Year - Ljusbolaget Syd AB</p>
-		</footer>
-	</div>
-	@Scripts.Render("~/bundles/jquery")
-	@Scripts.Render("~/bundles/bootstrap")
-	@RenderSection("scripts", required: false)
-	
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-	<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-	<script src="~/Scripts/blueimp-gallery.min.js"></script>
-	
-	<script>
-		document.getElementById('links').onclick = function (event) {
-			event = event || window.event;
-			var target = event.target || event.srcElement,
-				link = target.src ? target.parentNode : target,
-				options = { index: link, event: event },
-				links = this.getElementsByTagName('a');
-			blueimp.Gallery(links, options);
-		};
-	</script>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+   <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+         </button>
+         @Html.ActionLink("Ljusbolaget Syd", "Index", "Home", new { area = "" }, new { @class = "nav-name navbar-brand" })
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <ul class="nav navbar-nav">
+            <li>@Html.ActionLink("Hem", "Index", "Home")</li>
+            <li>@Html.ActionLink("Om oss", "About", "Home")</li>
+            <li class="dropdown">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Referenser <span class="caret"></span></a>
+               <ul class="dropdown-menu">
+                  <li>@Html.ActionLink("Alla","Gallery","Home")</li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+               </ul>
+            </li>
+            <li>@Html.ActionLink("Tjänster", "Services", "Home")</li>
+            <li>@Html.ActionLink("Utrustning", "Equipment", "Home")</li>
+            <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
+           
+         </ul>
+       <a class="" href="#">
+            <img src="/Content/Images/Logo/headerlogo.jpg" class="img-responsive">
+         </a>
+      </div><!-- /.navbar-collapse -->
+   </div><!-- /.container-fluid -->
+</nav>
+<div class="container body-content">
+   @RenderBody()
+   <footer>
+      <p>&copy; @DateTime.Now.Year - Ljusbolaget Syd AB</p>
+   </footer>
+</div>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+@RenderSection("scripts", required: false)
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<script src="~/Scripts/blueimp-gallery.min.js"></script>
+
+<script>
+   document.getElementById('links').onclick = function(event) {
+      event = event || window.event;
+      var target = event.target || event.srcElement,
+         link = target.src ? target.parentNode : target,
+         options = { index: link, event: event },
+         links = this.getElementsByTagName('a');
+      blueimp.Gallery(links, options);
+   };
+</script>
 
 </body>
 </html>

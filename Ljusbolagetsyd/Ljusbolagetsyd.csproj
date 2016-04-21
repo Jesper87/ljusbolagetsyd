@@ -133,6 +133,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\GalleryCategoriesXML.xml" />
     <Content Include="Content\blueimp-gallery-indicator.css" />
     <Content Include="Content\blueimp-gallery-video.css" />
     <Content Include="Content\blueimp-gallery.css" />
@@ -239,9 +240,7 @@
     <Content Include="Views\Home\_Slider.cshtml" />
     <Content Include="Views\Home\_ContactForm.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

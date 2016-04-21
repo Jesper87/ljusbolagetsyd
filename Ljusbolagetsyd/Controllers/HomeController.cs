@@ -24,7 +24,6 @@ namespace Ljusbolagetsyd.Controllers
 
       public ActionResult Gallery()
       {
-
          var path3 = Server.MapPath("~/Content/Images/Gallery");
 
          var service = new ImageService();

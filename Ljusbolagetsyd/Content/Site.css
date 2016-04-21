@@ -253,3 +253,9 @@ footer {
   max-height:200px;
   overflow:hidden;
 }
+nav .navbar-nav > .dropdown > .dropdown-menu {
+   background-color: black;
+}
+nav .navbar-nav > .dropdown > .dropdown-menu >li >a {
+   color: white;
+}
