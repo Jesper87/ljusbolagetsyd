@@ -1,7 +1,5 @@
 ﻿using System.Web.Mvc;
 using Ljusbolagetsyd.Data;
-using Ljusbolagetsyd.Data.Services;
-using Ljusbolagetsyd.Models;
 
 namespace Ljusbolagetsyd.Controllers
 {
@@ -22,7 +20,7 @@ namespace Ljusbolagetsyd.Controllers
 
       public ActionResult Contact()
       {
-         return View("Contact", new ContactFormViewModel());
+         return View();
       }
 
       public ActionResult Gallery()
@@ -41,20 +39,5 @@ namespace Ljusbolagetsyd.Controllers
       {
          return View();
       }
-
-      [ValidateAntiForgeryToken]
-      [HttpPost]
-      public ActionResult ContactForm(ContactFormViewModel model)
-      {
-         if (ModelState.IsValid)
-         {
-            var isSent = EmailService.SendNewEmail(model);
-            ModelState.Clear();
-            return View("Contact", new ContactFormViewModel { Succes = isSent });
-
-         }
-         return View("Contact");
-      }
-
    }
 }

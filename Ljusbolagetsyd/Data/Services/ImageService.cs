@@ -18,7 +18,7 @@ namespace Ljusbolagetsyd.Data
             try
             {
                var fileEntries = Directory.GetFiles(galleryFolderPath);
-               images.AddRange(fileEntries.Select(fileEntry => new GalleryImage { ImageUrl = fileEntry }));
+               images.AddRange(fileEntries.Select(filePath => new GalleryImage { ImageUrl = filePath }));
             }
             catch (Exception)
             {

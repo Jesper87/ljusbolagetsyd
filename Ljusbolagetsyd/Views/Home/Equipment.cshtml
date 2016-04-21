@@ -1,57 +1,100 @@
 ﻿
 @{
-    ViewBag.Title = "Equipment";
+   ViewBag.Title = "Equipment";
 }
 
-<h1>Utrustning</h1>
-<hr/>
-<div class="row">
-    <div class="col-md-4">
-        <div class="equipment">
-			<img src="~/Content/Images/Equipment/adadjgej.png" alt="" class="img-responsive" />
-            <div class="caption">
-                <p>LED</p>
+<h1 class="title">Utrustning</h1>
+   <div id="myTabs">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs" role="tablist">
+         <li role="presentation" class="active"><a href="#led" aria-controls="home" role="tab" data-toggle="tab">LED</a></li>
+         <li role="presentation"><a href="#ljusbord" aria-controls="profile" role="tab" data-toggle="tab">Ljusbord</a></li>
+         <li role="presentation"><a href="#effekter" aria-controls="messages" role="tab" data-toggle="tab">Effekter</a></li>
+         <li role="presentation"><a href="#rörligt" aria-controls="settings" role="tab" data-toggle="tab">Rörligt</a></li>
+         <li role="presentation"><a href="#rök" aria-controls="settings" role="tab" data-toggle="tab">Rök</a></li>
+         <li role="presentation"><a href="#tross" aria-controls="settings" role="tab" data-toggle="tab">Tross</a></li>
+      </ul>
+
+      <!-- Tab panes -->
+      <div class="tab-content">
+         <div role="tabpanel" class="tab-pane active" id="led">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="equipment">
+                     <img src="~/Content/Images/Equipment/adadjgej.png" alt="" class="img-responsive" />
+                     <div class="caption">
+                        <p>Beskrivning</p>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </div>
-	<div class="col-md-4">
-		<div class="equipment">
-			<img src="~/Content/Images/Equipment/aegjjiaa.png" class="img-responsive" alt="" />
-			<div class="caption">
-				<p>Ljusbord</p>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="equipment">
-			<img src="~/Content/Images/Equipment/afiafbce.png" alt="" class="img-responsive" />
-			<div class="caption">
-				<p>Effekter</p>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="equipment">
-			<img src="~/Content/Images/Equipment/dbcifgbh.png" alt="" class="img-responsive" />
-			<div class="caption">
-				<p>Rörligt</p>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="equipment">
-			<img src="~/Content/Images/Equipment/dicedhde.png" alt="" class="img-responsive" />
-			<div class="caption">
-				<p>Rök</p>
-			</div>
-		</div>
-	</div>
-	<div class="col-md-4">
-		<div class="equipment">
-			<img src="~/Content/Images/Equipment/hjghhaed.png" alt="" class="img-responsive" />
-			<div class="caption">
-				<p>Tross</p>
-			</div>
-		</div>
-	</div>
-</div>
+         </div>
+         <div role="tabpanel" class="tab-pane" id="ljusbord">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="equipment">
+                     <img src="~/Content/Images/Equipment/aegjjiaa.png" class="img-responsive" alt="" />
+                     <div class="caption">
+                        <p>Beskrivning</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div role="tabpanel" class="tab-pane" id="effekter">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="equipment">
+                     <img src="~/Content/Images/Equipment/afiafbce.png" alt="" class="img-responsive" />
+                     <div class="caption">
+                        <p>Beskrivning</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div role="tabpanel" class="tab-pane" id="rörligt">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="equipment">
+                     <img src="~/Content/Images/Equipment/dbcifgbh.png" alt="" class="img-responsive" />
+                     <div class="caption">
+                        <p>Beskrivning</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div role="tabpanel" class="tab-pane" id="rök">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="equipment">
+                     <img src="~/Content/Images/Equipment/dicedhde.png" alt="" class="img-responsive" />
+                     <div class="caption">
+                        <p>Beskrivning</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div role="tabpanel" class="tab-pane" id="tross">
+            <div class="row">
+               <div class="col-md-4">
+                  <div class="equipment">
+                     <img src="~/Content/Images/Equipment/hjghhaed.png" alt="" class="img-responsive" />
+                     <div class="caption">
+                        <p>Beskrivning</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+<script>
+   $('#myTabs a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+   })
+</script>

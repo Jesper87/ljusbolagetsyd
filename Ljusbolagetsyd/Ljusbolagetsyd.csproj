@@ -118,17 +118,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Data\Dto\EquipmentImage.cs" />
     <Compile Include="Data\Dto\GalleryImage.cs" />
-    <Compile Include="Data\Dto\GalleryImageAlbum.cs" />
     <Compile Include="Data\Dto\Image.cs" />
-    <Compile Include="Data\EmailConfiguration.cs" />
-    <Compile Include="Data\ImageService.cs" />
-    <Compile Include="Data\Services\EmailService.cs" />
+    <Compile Include="Data\Services\ImageService.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\ContactFormViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -237,9 +232,10 @@
     <Content Include="Views\Home\Equipment.cshtml" />
     <Content Include="Views\Home\Services.cshtml" />
     <Content Include="Views\Home\_Slider.cshtml" />
-    <Content Include="Views\Home\_ContactForm.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />

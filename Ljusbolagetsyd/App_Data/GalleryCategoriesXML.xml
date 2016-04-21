@@ -3,17 +3,29 @@
    <Category>
       <Id>1</Id>
       <Name>Test 1</Name>
+      <Images>
+         <Image></Image>
+      </Images>
    </Category>
    <Category>
       <Id>2</Id>
       <Name>Test 2</Name>
+      <Images>
+         <Image></Image>
+      </Images>
    </Category>
    <Category>
       <Id>3</Id>
       <Name>Test 3</Name>
+      <Images>
+         <Image></Image>
+      </Images>
    </Category>
    <Category>
       <Id>4</Id>
       <Name>Test 4</Name>
+      <Images>
+         <Image></Image>
+      </Images>
    </Category>
 </Categories>
