@@ -7,24 +7,37 @@ using Ljusbolagetsyd.Data.Dto;
 
 namespace Ljusbolagetsyd.Data
 {
-  public class ImageService
-  { 
-    public List<GalleryImage> GetImagesFromContentFolder(string path)
-    {
-      
-      var images = new List<GalleryImage>();
-
-      if(Directory.Exists(path))
+   public class ImageService
+   {
+      public List<GalleryImage> GetImagesFromGalleryFolder(string galleryFolderPath)
       {
-      var fileEntries = Directory.GetFiles(path);
-        foreach (var fileEntry in fileEntries)
-        {
-          var image = new GalleryImage();
-          image.ImageUrl = fileEntry;
-          images.Add(image);
-        }
+         var images = new List<GalleryImage>();
+
+         if (Directory.Exists(galleryFolderPath))
+         {
+            try
+            {
+               var fileEntries = Directory.GetFiles(galleryFolderPath);
+               images.AddRange(fileEntries.Select(fileEntry => new GalleryImage { ImageUrl = fileEntry }));
+            }
+            catch (Exception)
+            {
+               return images;
+            }
+         }
+
+         SetImageUrl(images);
+         return images;
       }
-      return images;
-    }
-  }
+
+      private static void SetImageUrl(IEnumerable<GalleryImage> images)
+      {
+         foreach (var galleryImage in images)
+         {
+            var str = galleryImage.ImageUrl.Split('\\');
+            var last = str[str.Length - 1];
+            galleryImage.ImageUrl = "/Content/Images/Gallery/" + last;
+         }
+      }
+   }
 }
